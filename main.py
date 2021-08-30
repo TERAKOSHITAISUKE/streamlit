@@ -105,6 +105,7 @@ df_std[Std_Features_chosen] = ssccaler.transform(df_std[Std_Features_chosen])
 
 
 
+
 left_column, right_column = st.columns(2)
 test_size = left_column.number_input(
     "検証用データのサイズ(比率:0.0-1.0):",
