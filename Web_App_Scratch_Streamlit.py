@@ -97,7 +97,7 @@ def main():
             		st.warning("Enter a Text in English...")
             	else:
             		st.info("Basic Functions")
-            		col1, col2 = st.beta_columns(2)
+            		col1, col2 = st.columns(2)
 
             		with col1:
             			with st.beta_expander("Basic Info"):
