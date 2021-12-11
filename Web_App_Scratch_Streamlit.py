@@ -141,7 +141,7 @@ def main():
             				st.json(tandl)
 
             		with col4:
-            			with st.st.expander("Summarize"):
+            			with st.expander("Summarize"):
             				st.success("Summarize")
             				summary_text = summarize(raw_text,ratio=0.4)
             				if summary_text != "":
