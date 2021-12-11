@@ -100,7 +100,7 @@ def main():
             		col1, col2 = st.columns(2)
 
             		with col1:
-            			with st.st.expander("Basic Info"):
+            			with st.expander("Basic Info"):
             				st.success("Text Stats")
             				word_desc = nt.TextFrame(raw_text).word_stats()
             				result_desc = {"Length of Text":word_desc['Length of Text'],
@@ -109,18 +109,18 @@ def main():
 											"Num of Stopwords":word_desc['Num of Stopwords']}
             				st.write(result_desc)
 
-            			with st.st.expander("Stopwords"):
+            			with st.expander("Stopwords"):
             				st.success("Stop Words List")
             				stop_w = nt.TextExtractor(raw_text).extract_stopwords()
             				st.error(stop_w)
 
             		with col2:
-            			with st.st.expander("Processed Text"):
+            			with st.expander("Processed Text"):
             				st.success("Stopwords Excluded Text")
             				processed_text = str(nt.TextFrame(raw_text).remove_stopwords())
             				st.write(processed_text)
 
-            			with st.st.expander("Plot Wordcloud"):
+            			with st.expander("Plot Wordcloud"):
             			    st.success("Wordcloud")
             			    plot_wordcloud(raw_text)
 
@@ -129,10 +129,10 @@ def main():
             		st.write("")
             		st.write("")
             		st.info("Advanced Features")
-            		col3, col4 = st.beta_columns(2)
+            		col3, col4 = st.columns(2)
 
             		with col3:
-            			with st.st.expander("Tokens&Lemmas"):
+            			with st.expander("Tokens&Lemmas"):
             				st.write("T&L")
             				processed_text_mid = str(nt.TextFrame(raw_text).remove_stopwords())
             				processed_text_mid = str(nt.TextFrame(processed_text_mid).remove_puncts())
